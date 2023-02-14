@@ -1,14 +1,18 @@
-const buttons = document.querySelectorAll('.btn');
-const display = document.querySelector('.display');
+const input = document.querySelector('#calculator .display input');
+const buttons = document.querySelectorAll('#calculator .buttons button');
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    const value = button.getAttribute('data-value');
+    const value = button.textContent;
 
-    if (value === '=') {
-      display.textContent = eval(display.textContent);
+    if (value === '÷') {
+      input.value += '/';
+    } else if (value === '×') {
+      input.value += '*';
+    } else if (value === '=') {
+      input.value = eval(input.value);
     } else {
-      display.textContent += value;
+      input.value += value;
     }
   });
 });
