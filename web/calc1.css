@@ -1,0 +1,20 @@
+body.dark {
+  background-color: #333;
+  color: #ddd;
+}
+
+.display {
+  background-color: #ddd;
+  color: #333;
+  padding: 0.5em;
+  text-align: right;
+}
+
+.display.dark {
+  background-color: #333;
+  color: #ddd;
+}
+
+.btn {
+  /* ... other styles ... */
+}
