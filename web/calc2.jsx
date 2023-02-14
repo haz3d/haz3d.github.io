@@ -9,6 +9,8 @@ buttons.forEach(button => {
       input.value += '/';
     } else if (value === '×') {
       input.value += '*';
+    } else if (value === 'AC') {
+      input.value = '';
     } else if (value === '=') {
       input.value = eval(input.value);
     } else {
